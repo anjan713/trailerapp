@@ -29,8 +29,8 @@ class _DetailsVideoScreenState extends State<DetailsVideoScreen> {
   fetchVideo() async {
     var movieId = widget.moviedetails["id"];
 
-    var api = await http.get(
-        "https://api.themoviedb.org/3/movie/$movieId/videos?api_key=6d832dc729465b6e297c8c4c7793b76c");
+    var api = await http
+        .get("https://api.themoviedb.org/3/movie/$movieId/videos?api_key={}");
 
     var myResult = jsonDecode(api.body);
     videoList.addAll(myResult);
@@ -57,7 +57,7 @@ class _DetailsVideoScreenState extends State<DetailsVideoScreen> {
           floatingPosition: FloatingPosition(right: 20.0),
           floatingWidget: FloatingActionButton(
             onPressed: () {
-             Navigator.of(context).push(MaterialPageRoute(
+              Navigator.of(context).push(MaterialPageRoute(
                   builder: (ctx) => MyYouTubePlayer(
                         controller: YoutubePlayerController(
                             initialVideoId: videoList["results"][0]["key"]),

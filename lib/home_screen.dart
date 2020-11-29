@@ -15,12 +15,10 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Future<void> fetchtrendingMovie() async {
     maviedetails = {};
-    var api =
-        'https://api.themoviedb.org/3/trending/movie/day?api_key=6d832dc729465b6e297c8c4c7793b76c';
+    var api = 'https://api.themoviedb.org/3/trending/movie/day?api_key={}';
     var response = await http.get(api);
     var result = jsonDecode(response.body);
     maviedetails.addAll(result);
-   
   }
 
   @override
