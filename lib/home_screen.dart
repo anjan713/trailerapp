@@ -15,7 +15,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Future<void> fetchtrendingMovie() async {
     maviedetails = {};
-    var api = 'https://api.themoviedb.org/3/trending/movie/day?api_key={}';
+    var api = 'https://api.themoviedb.org/3/trending/movie/day?api_key={enter_your_api_key}';
     var response = await http.get(api);
     var result = jsonDecode(response.body);
     maviedetails.addAll(result);
@@ -48,7 +48,6 @@ class _HomeScreenState extends State<HomeScreen> {
         height: double.infinity,
         width: double.infinity,
         child: ListView.builder(
-          // scrollDirection: Axis.horizontal,
           itemCount: 20,
           itemBuilder: (BuildContext context, int index) {
             return FutureBuilder(
@@ -90,21 +89,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           SizedBox(
                             height: 20,
                           ),
-                          // RaisedButton(
-                          //   onPressed: () {
-                          //     Navigator.of(context).push(
-                          //       MaterialPageRoute(
-                          //           builder: (ctx) => DetailsVideoScreen(
-                          //               maviedetails['results'][index])
-                          //           // DetailsScreen(maviedetails['results'][index]
-                          //           ),
-                          //     );
-                          //     // )
-                          //     // ;
-                          //   },
-                          //   color: Colors.amber,
-                          //   child: Text('Movie Details'),
-                          // ),
+                          
                         ],
                       ),
                     );

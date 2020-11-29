@@ -30,7 +30,7 @@ class _DetailsVideoScreenState extends State<DetailsVideoScreen> {
     var movieId = widget.moviedetails["id"];
 
     var api = await http
-        .get("https://api.themoviedb.org/3/movie/$movieId/videos?api_key={}");
+        .get("https://api.themoviedb.org/3/movie/$movieId/videos?api_key={enter_your_api_key}");
 
     var myResult = jsonDecode(api.body);
     videoList.addAll(myResult);
