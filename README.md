@@ -7,6 +7,8 @@ developed an trailer app using movie api which fetches the trending movies from 
 
 Main Screen 
 
+![trailer1](https://user-images.githubusercontent.com/40123185/100905319-f1968880-34ed-11eb-9e83-e8371775a85d.gif)
+
 
 ![4o8tjt](https://user-images.githubusercontent.com/40123185/100905302-ee030180-34ed-11eb-9897-ac3107f05417.gif)
 
@@ -16,4 +18,4 @@ Detail Screen
 
 Trailer Screen
 
-![trailer1](https://user-images.githubusercontent.com/40123185/100905319-f1968880-34ed-11eb-9e83-e8371775a85d.gif)
+
